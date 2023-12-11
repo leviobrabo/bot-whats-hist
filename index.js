@@ -205,7 +205,7 @@ const sendPresidentMessage = async () => {
 
 client.on('ready', () => {
   console.log('Client is ready!');
-  const EventsJob = new CronJob('00 05 * * *', sendDailyMessage);
+  const EventsJob = new CronJob('30 08 * * *', sendDailyMessage);
   EventsJob.start();
   const HolidayJob = new CronJob('00 11 * * *', sendHolidayMessage);
   HolidayJob.start();
