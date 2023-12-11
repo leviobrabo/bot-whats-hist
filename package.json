@@ -1,0 +1,24 @@
+{
+  "name": "whats-hist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^3.1.6",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.0.3",
+    "puppeteer": "^21.6.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "github:alechkos/whatsapp-web.js#channels"
+  },
+  "devDependencies": {
+    "@types/cron": "^2.4.0"
+  }
+}
