@@ -8,7 +8,10 @@ dotenv.config();
 
 
 const client = new Client({
-  authStrategy: new LocalAuth()
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    args: ['--no-sandbox'],
+  }
 });
 
 client.on('qr', (qr) => {
