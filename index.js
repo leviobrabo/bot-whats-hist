@@ -213,8 +213,8 @@ client.on('ready', () => {
   PhraseJob.start();
   const CurisotyJob = new CronJob('00 18 * * *', sendCuriosityMessage);
   CurisotyJob.start();
-  // const PresidentsJob = new CronJob('59 23 * * *', sendPresidentMessage);
-  // PresidentsJob.start();
+  const PresidentsJob = new CronJob('59 23 * * *', sendPresidentMessage);
+  PresidentsJob.start();
 });
 
 client.initialize();
