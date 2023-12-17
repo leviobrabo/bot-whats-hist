@@ -162,7 +162,7 @@ const sendPresidentMessage = async () => {
       const caption = `*${presidente.titulo}*\n\n*Nome:* ${presidente.nome}\n*Informação:* ${presidente.posicao}° ${presidente.titulo}\n*Partido:* ${presidente.partido}\n*Ano de mandato:* ${presidente.ano_de_mandato}\n*Vice-Presidente:* ${presidente.vice_presidente}\n\n\`\`\`⭐️ Inscreva-se no nosso canal\`\`\``;
       console.log(caption)
       console.log('Sending message with president information...');
-      var media = await MessageMedia.fromUrl(URL);
+      let media = await MessageMedia.fromUrl(URL);
       await client.sendMessage('120363204550105594@newsletter', media, { caption: caption });
 
       console.log('Message sent with president information.');
@@ -190,7 +190,7 @@ const sendPresidentMessage = async () => {
           const presidente = proximoPresidente;
           const URL = presidente.foto;
           const caption = `*${presidente.titulo}*\n\n*Nome:* ${presidente.nome}\n*Informação:* ${presidente.posicao}° ${presidente.titulo}\n*Partido:* ${presidente.partido}\n*Ano de mandato:* ${presidente.ano_de_mandato}\n*Vice-Presidente:* ${presidente.vice_presidente}\n\n\`\`\`⭐️ Inscreva-se no nosso canal\`\`\``;
-          const media = await MessageMedia.fromUrl(URL);
+          let media = await MessageMedia.fromUrl(URL);
           await client.sendMessage(myChannelId, media, { caption: caption });
 
           console.log(`Mensagem com informações do próximo presidente enviada.`);
@@ -209,7 +209,7 @@ client.on('ready', () => {
   EventsJob.start();
   const HolidayJob = new CronJob('00 11 * * *', sendHolidayMessage);
   HolidayJob.start();
-  const PhraseJob = new CronJob('00 14 * * *', sendPhraseMessage);
+  const PhraseJob = new CronJob('10 16 * * *', sendPhraseMessage);
   PhraseJob.start();
   const CurisotyJob = new CronJob('00 18 * * *', sendCuriosityMessage);
   CurisotyJob.start();
